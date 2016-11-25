@@ -10,6 +10,8 @@ method ended up like this:
 Introduction to Internet Software Development (http://www.bcit.ca/study/outlines/20163035498) is a
 course from B.C. Institute of Technology (http://www.bcit.ca/cas/computing/) ✉ (mailto:jim_parry@bcit.ca)
 
+[Lab9 started]    
+    
 34. Dump new lab8.sql and stored into data folder and delete existed lab5.sql
 33. Updated changed picatures form        
 32. Fixed order summary - @ck    
