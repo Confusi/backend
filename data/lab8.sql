@@ -154,67 +154,16 @@ ALTER TABLE `ci_sessions`
 ALTER TABLE `menu`
   ADD PRIMARY KEY (`id`);
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `orderitems`
+-- 테이블의 인덱스 `orderitems`
 --
-
-DROP TABLE IF EXISTS `Orderitems`;
-CREATE TABLE `Orderitems` (
-  `order` int(11) NOT NULL,
-  `item` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL,
-  `special` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `orders`
---
-
-DROP TABLE IF EXISTS `Orders`;
-CREATE TABLE `Orders` (
-  `num` int(11) NOT NULL,
-  `date` datetime NOT NULL,
-  `status` varchar(1) NOT NULL,
-  `total` decimal(10,2) NOT NULL,
-  `customer` varchar(64) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `categories`
---
-ALTER TABLE `Categories`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `ci_sessions`
---
-ALTER TABLE `ci_sessions`
-  ADD KEY `ci_sessions_timestamp` (`timestamp`);
-
---
--- Indexes for table `menu`
---
-ALTER TABLE `Menu`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `orderitems`
---
-ALTER TABLE `Orderitems`
+ALTER TABLE `orderitems`
   ADD PRIMARY KEY (`order`,`item`);
 
 --
--- Indexes for table `orders`
+-- 테이블의 인덱스 `orders`
 --
-ALTER TABLE `Orders`
+ALTER TABLE `orders`
   ADD PRIMARY KEY (`num`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
