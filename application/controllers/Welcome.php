@@ -15,6 +15,7 @@ class Welcome extends Application
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index() {
+		/*
 		$result = '';
 		$oddrow = true;
 		foreach ($this->Categories->all() as $category) {
@@ -23,6 +24,11 @@ class Welcome extends Application
 			$oddrow = ! $oddrow;
 		}
 		$this->data['content'] = $result;
+		$this->render();
+		*/
+		$this->load->helper('formfields');
+		$this->data['title'] = "Cafe (Server)";
+		$this->data['pagebody'] = 'welcome_msg';
 		$this->render();
 	}
 }
